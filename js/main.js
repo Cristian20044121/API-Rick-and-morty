@@ -1,43 +1,43 @@
-const cards = async() => {
-    try{
-        const response = await fetch('https://rickandmortyapi.com/api/character');
-        const data = await response.json()
+const containerPagination = document.querySelector('.pagination');
 
-        let html = '';
+containerPagination.addEventListener('click', async (e) => {
+  e.preventDefault();
 
-        data.results.forEach(card => {
-           html += `
-           <div class="container-card">
-    
-           <img src="${card.image}" alt="image of character" class="image">
-         <div class="container-text">
-           <h3>${card.name}</h3>
-           <p>${card.status} - ${card.species}</p>
-           <div class="container3">
-             <div class="div-1">
-              <a href="${card.episode}">Episode</a>
-             </div>
-             <div class="div-2">
-                <a href="https://rickandmortyapi.com/api/location">${card.location.name}</a>
-             </div>
-             
-           </div>
-           <div class="container4">
-             <img src="images/image-avatar.png" alt="image-avatar">
-             <p>Creation of <span> Jules Wyvern</span></p>
-           </div>
-           
-         </div>
-       </div>
-            `
-            
-        });
-        let container = document.querySelector('.container');
-        container.innerHTML= html;
-        
-    }catch (err){
-        console.error(err)
+  if (e.target.classList.contains('page-link')) { // Cambia 'x' por la clase correcta de los elementos de paginación
+    const page = e.target.textContent; // Obtiene el número de página del contenido del elemento clicado
+
+    try {
+      const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}`);
+      const data = await response.json();
+
+      let html = '';
+
+      data.results.forEach(card => {
+        html += `
+          <div class="container-card">
+            <img src="${card.image}" alt="image of character" class="image">
+            <div class="container-text">
+              <h3>${card.name}</h3>
+              <p>${card.status} - ${card.species}</p>
+              <div class="container3">
+                <div class="container-info">
+                  <p><span>GENDER:</span> ${card.gender}</p>
+                  <p><span>LOCATION:</span> <a href="${card.location.url}" target="_blank">${card.location.name}</a></p>
+                </div>
+              </div>
+              <div class="container-type">
+                <p>${card.type}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      let container = document.querySelector('.container');
+      container.innerHTML = html;
+
+    } catch (err) {
+      console.error(err);
     }
-}
-
-cards();
+  }
+});
