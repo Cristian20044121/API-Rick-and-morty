@@ -1,9 +1,82 @@
 
 .container{
     border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 90%;
+    margin: 100px auto;
 }
 
-.card{
-    border: 2px solid red ;
-    width: 40%;
+.container-card{
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 200px;
+    text-align: center;
+    background-color: rgb(21, 39, 63);
+    box-shadow: 0px 11px 37px 40px rgb(12, 23, 41);
+
+}
+
+.image{
+    width: 230px;
+    height: 230px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.container-text{
+    padding-left: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: white;
+}
+.container3{
+    display: flex;
+
+   
+}
+.div-1 h4{
+    color: #1bfffe;
+}
+.div-2{
+    margin-left: 70px;
+}
+.div-2 h4{
+    color: rgb(74, 98, 134);
+}
+
+/* hr{
+    width: 90%;
+} */
+
+
+.container4{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(63, 63, 63, 0.925);
+    width: 248px;
+}
+
+.container4 img{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.container4 p{
+    margin-left: 10px;
+}
+
+span{
+    color: white;
+}
+
+h3{
+    color: white;
 }
