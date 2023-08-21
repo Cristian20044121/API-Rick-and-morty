@@ -95,6 +95,7 @@ nav > a:hover{
 .container p{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     
 }
 .image{
@@ -156,6 +157,7 @@ span{
 h3{
     color: white;
 }
+
 
 /* footer */
 footer{
