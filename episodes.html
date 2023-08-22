@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="img/desktop-wallpaper-rick-and-morty-logo-png-for-computer-supreme-rick-and-morty.jpg" type="image/x-icon">
+    <title>API RICK AND MORTY-EPISODES</title>
+</head>
+<body>
+    
+    <header>
+        <a href="index.html">
+            <img src="img/6210065.webp" alt="">
+        </a>
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="">EPISODIOS</a>
+            <a href="">LUGARES</a>
+        </nav>
+    </header>
+
+    <section class="introduction">
+        <h1>RICK AND MORTY</h1>
+    </section>
+
+    <div class="pagination">
+        <div class="pagination-container-page-character">
+             <label for="select-page">PAGE: </label>
+             <select name="select-page" id="select">
+                 <option value="0">SELECCIONAR</option>
+             </select>
+ 
+        </div>
+         <div class="pagination-container-one-character">
+             <label for="select-episode">EPISODE: </label>
+             <select name="select-episode" id="select_one_episode">
+                 <option value="0">SELECCIONAR</option>
+             </select>
+         </div>
+     </div>
+     <div class="container-filter">
+         <label for="filter">FILTER: </label>
+         <input type="text" class="filter" name="filter">
+     </div>
+    
+
+    <div class="container">
+    </div>
+
+    <script src="js/episodes.js"></script>
+</body>
+</html>
