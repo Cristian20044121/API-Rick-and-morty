@@ -6,24 +6,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="img/desktop-wallpaper-rick-and-morty-logo-png-for-computer-supreme-rick-and-morty.jpg" type="image/x-icon">
-    <title>API RICK AND MORTY-EPISODES</title>
+    <title>API RICK AND MORTY-LOCATIONS</title>
 </head>
 <body>
-    
-    <header>
+
+     <header>
         <a href="index.html">
             <img src="img/6210065.webp" alt="">
         </a>
         <nav>
             <a href="index.html">INICIO</a>
-            <a href="episodes.html">EPISODIOS</a>
-            <a href="location.html">LUGARES</a>
+            <a href="">EPISODIOS</a>
+            <a href="">LUGARES</a>
         </nav>
     </header>
 
     <section class="introduction">
-        <h1 class="title-episodes">RICK AND MORTY EPISODES</h1>
+        <h1 class="title-episodes">RICK AND MORTY LOCATIONS</h1>
     </section>
+    
+    <div class="introduction-locations">
+        <h2>🎆 LOCATIONS 🎇</h2>
+        <img src="img/Rick-and-Morty-Pluto-Unitys-Planet.avif" alt="image of morty and a universe">
+    </div>
 
     <div class="pagination">
         <div class="pagination-container-page-character">
@@ -33,9 +38,9 @@
              </select>
  
         </div>
-         <div class="pagination-container-one-character">
-             <label for="select-episode">EPISODE: </label>
-             <select name="select-episode" id="select_one_episode">
+         <div class="pagination-container-one">
+             <label for="select-location">LOCATION: </label>
+             <select name="select-location" id="select_one_location">
                  <option value="0">SELECCIONAR</option>
              </select>
          </div>
@@ -44,7 +49,7 @@
          <label for="filter">FILTER: </label>
          <input type="text" class="filter" name="filter">
      </div>
-    
+
      <!-- container cards  -->
     <div class="container"></div>
 
@@ -56,7 +61,7 @@
         </div>
         <p>&copy; 2023 CRISTIAN CARO. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="js/episodes.js"></script>
+    <script src="js/location.js"></script>
+    
 </body>
 </html>
