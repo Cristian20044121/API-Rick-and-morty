@@ -91,7 +91,7 @@ const filterCharactersByName = async (name) => {
 const generateLocationCard = (card) => {
     return `
         <div class="container-card">
-            <img src="../img/Screaming-Sun-Planet.avif" alt="imagen de la ubicación" class="image">
+            <img src="img/Screaming-Sun-Planet.avif" alt="imagen de la ubicación" class="image">
             <div class="container-text">
                 <h3>${card.name}</h3>
                 <p>${card.type} - ${card.dimension}</p>

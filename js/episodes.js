@@ -91,7 +91,7 @@ const filterCharactersByName = async (name) => {
 const generateCharacterCard = (card) => {
   return `
       <div class="container-card">
-          <img src="../img/rick-morty-critica.webp" alt="image of port" class="image">
+          <img src="img/rick-morty-critica.webp" alt="image of port" class="image">
           <div class="container-text">
               <h3>${card.name}</h3>
               <p>${card.episode} - ${card.air_date}</p>
